@@ -23,6 +23,21 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            padding: 16px;
+            display: flex;
+        }
+        img{
+          width: 80px;
+          height: 80px;
+          border: 6px solid;
+          color: #ff9500;
+          .artigo-autor{
+              font-weight: bold;
+          }
+
+        }
+        p{
+            font-weight: bold;
         }
     </style>     
 </head>
@@ -34,10 +49,25 @@
 
     <main>
     <img src="Platão.png" alt="Ilustração em arte pixelada (pixel art) de um filósofo grego antigo, remetendo a Platão. Um homem idoso com pele bronzeada, cabelos e barba longa brancos, e uma expressão pensativa. Ele está apoiando o queixo na mão direita e segura um pergaminho enrolado com a mão esquerda. Veste uma túnica cinza-esverdeada. Ao fundo, há uma estrutura arquitetônica clássica com colunas e, ao longe, o que parece ser o Partenon sob um céu azul claro.">
-
-    <h2>Conhecer Platão e suas ideias</h2>
-    <p>Por Wesley Machado</p>
-    <
+    <div>
+        <h2>Conhecer Platão e suas ideias</h2>
+        <p class="artigo-autor"> Por: Wesley Machado</p>
+        <p>Irei compartilhar sobre Platão</p>
+        <button>😈 <span>0</span></button>
+    </div>
+    
     </main>
-</body>
+  <body>
+    <script>
+        const botao = document.querySelector("button");
+        botao.addEventListener("click", botaoClicado);
+       function botaoClicado() {
+    console.log("fui clicado");
+    let texto = botao.querySelector("span");
+    texto.textContent++;
+}
+
+
+
+    </script>
 </html>
