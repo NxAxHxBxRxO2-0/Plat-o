@@ -35,13 +35,10 @@
             border: 6px solid;
             color: #ff9500;
 
-            .artigo-autor {
-                font-weight: bold;
-            }
-
+        
         }
 
-        p {
+        .artigo-autor {
             font-weight: bold;
         }
     </style>
@@ -61,28 +58,21 @@
             <p class="artigo-autor"> Por: Wesley Machado</p>
             <p>Irei compartilhar sobre Platão</p>
             <button>😈 <span>0</span></button>
-            <button>🤯 <span>0</span></button>
         </div>
-    </main>
-    <body>
-        <script>
-        const botoes = document.querySelectorAll("button");
-        function botaoClicado() {
-            botoes.forEach(  function (botao){ 
+     </main>
+</body>
+<script>
+    const botao = document.querySelector("button");
+    botao.addEventListener("click", botaoClicado);
 
-                console.log("fui clicado");
-                let texto = botao.querySelector("span");
-                if (curtiu === false){
-                    texto.textContent++;
-                    curtiu = true;
-                } else {
-                    texto.textContent--;
-                    curtiu = false;
-                }
-            }
+    function botaoClicado() {
+    console.log("fui clicado");
+    let texto = botao.querySelector("span");
+    texto.textContent++;
+   }
             
-        )}
+    
 
-        </script>
+</script>
 
 </html>
